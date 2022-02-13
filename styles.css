@@ -1,0 +1,11 @@
+.checker {
+  display: block;
+}
+.hidden {
+  display: none;
+}
+
+.displayDusty {
+  display: flex;
+  justify-content: space-around;
+}

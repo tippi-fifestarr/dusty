@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <title>DnD script</title>
+  </head>
+  <body>
+    <h1>welcome dusty or friends!</h1>
+    <h2>check the boxes for flow, yo!</h2>
+    <div class="displayDusty">
+      <button onclick="displayDustyStats()">display dusty</button>
+      <p>level:</p>
+      <p id="level">_</p>
+      <p>base ranged attack bonus:</p>
+      <p id="brab">_</p>
+      <p>pointblank?</p>
+      <p id="pblank">_</p>
+      <p>rapidshot?</p>
+      <p id="rapids">_</p>
+    </div>
+    <div id="fa" class="fullaction checker" onclick="checkClick(this)">
+      <input type="checkbox" id="fullaction" name="fullaction" unchecked />
+      <label for="fullaction"
+        >check if you are using the full turn to shoot, not using
+        <a href="https://www.d20srd.org/srd/feats.htm#shotOnTheRun"
+          >shot on the run</a
+        ></label
+      >
+    </div>
+    <div id="rs" class="hidden rapidshot checker" onclick="checkClick(this)">
+      <!-- rapid shot adds one shot at full attack roll, reducing attack roll by all attacks by 2 -->
+      <input type="checkbox" id="rapidshot" name="rapidshot" unchecked />
+      <label for="rapidshot"
+        >are you using
+        <a href="https://www.d20srd.org/srd/feats.htm#rapidShot"
+          >rapidshot?</a
+        ></label
+      >
+    </div>
+    <div id="pb" class="hidden pointblank checker" onclick="checkClick(this)">
+      <input type="checkbox" id="pointblank" name="pointblank" unchecked />
+      <label for="pointblank"
+        >are you within 30ft (<a
+          href="https://www.d20srd.org/srd/feats.htm#pointBlankShot"
+          >pointblank</a
+        >)?</label
+      >
+    </div>
+    <div id="sa" class="hidden sneakattack checker" onclick="checkClick(this)">
+      <input type="checkbox" id="sneakattack" name="sneakattack" unchecked />
+      <label for="sneakattack">are you doing a sneak attack?</label>
+    </div>
+    <div>
+      <input type="checkbox" id="ready" name="ready" unchecked />
+      <label for="ready">Ready!</label>
+    </div>
+    Hello world
+    <script src="script.js"></script>
+  </body>
+</html>
